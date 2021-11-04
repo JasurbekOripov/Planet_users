@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="uz.juo.planetusers.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            app:enterAnim="@anim/anim"
+            app:exitAnim="@anim/anim"
+            app:popEnterAnim="@anim/anim"
+            app:popExitAnim="@anim/anim"
+            android:id="@+id/action_mainFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            app:enterAnim="@anim/anim"
+            app:exitAnim="@anim/anim"
+            app:popEnterAnim="@anim/anim"
+            app:popExitAnim="@anim/anim"
+            android:id="@+id/action_mainFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="uz.juo.planetusers.ui.edit.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            app:enterAnim="@anim/anim"
+            app:exitAnim="@anim/anim"
+            app:popEnterAnim="@anim/anim"
+            app:popExitAnim="@anim/anim"
+            android:id="@+id/action_editFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="uz.juo.planetusers.ui.info.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            app:enterAnim="@anim/anim"
+            app:exitAnim="@anim/anim"
+            app:popEnterAnim="@anim/anim"
+            app:popExitAnim="@anim/anim"
+            android:id="@+id/action_infoFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="uz.juo.planetusers.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+</navigation>
